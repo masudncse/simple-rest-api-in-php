@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "f3fcde70-a85e-48e1-afd6-b9ac83445d3f",
+		"name": "SIMPLE_REST_API_IN_PHP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7843003"
+	},
+	"item": [
+		{
+			"name": "Read",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/create-simple-rest-api-in-php/api/product/read.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"create-simple-rest-api-in-php",
+						"api",
+						"product",
+						"read.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read One",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/create-simple-rest-api-in-php/api/product/read_one.php?id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"create-simple-rest-api-in-php",
+						"api",
+						"product",
+						"read_one.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/create-simple-rest-api-in-php/api/product/delete.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"create-simple-rest-api-in-php",
+						"api",
+						"product",
+						"delete.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Samsung Galaxy\",\r\n    \"price\": \"5000\",\r\n    \"description\": \"I love samsung galaxy phone\",\r\n    \"category_id\": \"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/create-simple-rest-api-in-php/api/product/create.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"create-simple-rest-api-in-php",
+						"api",
+						"product",
+						"create.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Samsung Galaxy\",\r\n    \"price\": \"5000\",\r\n    \"description\": \"I love samsung galaxy phone\",\r\n    \"category_id\": \"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/create-simple-rest-api-in-php/api/product/create.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"create-simple-rest-api-in-php",
+						"api",
+						"product",
+						"create.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
