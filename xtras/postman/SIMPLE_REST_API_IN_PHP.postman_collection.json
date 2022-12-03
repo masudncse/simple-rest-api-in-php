@@ -12,13 +12,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost/create-simple-rest-api-in-php/api/product/read.php",
+					"raw": "http://localhost/simple-rest-api-in-php/api/product/read.php",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"path": [
-						"create-simple-rest-api-in-php",
+						"simple-rest-api-in-php",
 						"api",
 						"product",
 						"read.php"
@@ -45,13 +45,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost/create-simple-rest-api-in-php/api/product/read_one.php?id=2",
+					"raw": "http://localhost/simple-rest-api-in-php/api/product/read_one.php?id=2",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"path": [
-						"create-simple-rest-api-in-php",
+						"simple-rest-api-in-php",
 						"api",
 						"product",
 						"read_one.php"
@@ -81,13 +81,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost/create-simple-rest-api-in-php/api/product/delete.php",
+					"raw": "http://localhost/simple-rest-api-in-php/api/product/delete.php",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"path": [
-						"create-simple-rest-api-in-php",
+						"simple-rest-api-in-php",
 						"api",
 						"product",
 						"delete.php"
@@ -111,13 +111,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost/create-simple-rest-api-in-php/api/product/create.php",
+					"raw": "http://localhost/simple-rest-api-in-php/api/product/create.php",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"path": [
-						"create-simple-rest-api-in-php",
+						"simple-rest-api-in-php",
 						"api",
 						"product",
 						"create.php"
@@ -141,13 +141,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost/create-simple-rest-api-in-php/api/product/create.php",
+					"raw": "http://localhost/simple-rest-api-in-php/api/product/create.php",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"path": [
-						"create-simple-rest-api-in-php",
+						"simple-rest-api-in-php",
 						"api",
 						"product",
 						"create.php"
