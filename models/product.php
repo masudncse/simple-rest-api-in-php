@@ -1,7 +1,7 @@
 <?php
+
 class Product
 {
-
     // database connection and table name
     private $conn;
     private $table_name = "products";
@@ -20,6 +20,7 @@ class Product
     {
         $this->conn = $db;
     }
+
     // read products
     public function read()
     {
@@ -42,10 +43,10 @@ class Product
 
         return $stmt;
     }
+
     // create product
     public function create()
     {
-
         // query to insert record
         $query = "INSERT INTO
                 " . $this->table_name . "
@@ -75,10 +76,10 @@ class Product
         }
         return false;
     }
+
     // used when filling up the update product form
     public function readOne()
     {
-
         // query to read single record
         $query = "SELECT
                 c.name as category_name, p.id, p.name, p.description, p.price, p.category_id, p.created
@@ -110,10 +111,10 @@ class Product
         $this->category_id = $row['category_id'];
         $this->category_name = $row['category_name'];
     }
+
     // update the product
     public function update()
     {
-
         // update query
         $query = "UPDATE
                 " . $this->table_name . "
@@ -149,10 +150,10 @@ class Product
 
         return false;
     }
+
     // delete the product
     public function delete()
     {
-
         // delete query
         $query = "DELETE FROM " . $this->table_name . " WHERE id = ?";
 
@@ -171,7 +172,5 @@ class Product
         }
 
         return false;
-
     }
-
 }
