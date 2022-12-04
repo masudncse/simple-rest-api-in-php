@@ -6,8 +6,10 @@ header("Access-Control-Allow-Methods: GET");
 header("Access-Control-Allow-Credentials: true");
 header('Content-Type: application/json');
 
-// include database and object files
+// instantiate database connection
 include_once '../../config/database.php';
+
+// instantiate product object
 include_once '../../models/product.php';
 
 // get database connection

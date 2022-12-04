@@ -2,6 +2,7 @@
 
 class Product
 {
+
     // database connection and table name
     private $conn;
     private $table_name = "products";
@@ -47,6 +48,7 @@ class Product
     // create product
     public function create()
     {
+
         // query to insert record
         $query = "INSERT INTO
                 " . $this->table_name . "
@@ -74,12 +76,14 @@ class Product
         if ($stmt->execute()) {
             return true;
         }
+
         return false;
     }
 
     // used when filling up the update product form
     public function readOne()
     {
+
         // query to read single record
         $query = "SELECT
                 c.name as category_name, p.id, p.name, p.description, p.price, p.category_id, p.created
@@ -104,6 +108,7 @@ class Product
 
         // get retrieved row
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
         // set values to object properties
         $this->name = $row['name'];
         $this->price = $row['price'];
@@ -115,6 +120,7 @@ class Product
     // update the product
     public function update()
     {
+
         // update query
         $query = "UPDATE
                 " . $this->table_name . "
@@ -154,6 +160,7 @@ class Product
     // delete the product
     public function delete()
     {
+
         // delete query
         $query = "DELETE FROM " . $this->table_name . " WHERE id = ?";
 

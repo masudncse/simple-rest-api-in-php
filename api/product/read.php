@@ -3,15 +3,17 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
-// include database and object files
+// instantiate database connection
 include_once '../../config/database.php';
+
+// instantiate product object
 include_once '../../models/product.php';
 
-// instantiate database and product object
+// get database connection
 $database = new Database();
 $db = $database->getConnection();
 
-// initialize object
+// prepare product object
 $product = new Product($db);
 
 // query products

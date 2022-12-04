@@ -2,6 +2,7 @@
 
 class Database
 {
+
     // specify your own database credentials
     private $host = "localhost";
     private $db_name = "api_db";
@@ -9,11 +10,10 @@ class Database
     private $password = "";
     public $conn;
 
-    /**
-     * @return PDO|null
-     */
+    // get the database connection
     public function getConnection()
     {
+
         $this->conn = null;
 
         try {

@@ -6,8 +6,10 @@ header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-// include database and object files
+// instantiate database connection
 include_once '../../config/database.php';
+
+// instantiate product object
 include_once '../../models/product.php';
 
 // get database connection
@@ -35,8 +37,8 @@ if ($product->update()) {
     // set response code - 200 ok
     http_response_code(200);
 
-        // tell the user
-        echo json_encode(array("message" => "Product was updated."));
+    // tell the user
+    echo json_encode(array("message" => "Product was updated."));
 }
 
 // if unable to update the product, tell the user

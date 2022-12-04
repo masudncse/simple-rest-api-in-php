@@ -6,25 +6,29 @@ header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-// get database connection
+// instantiate database connection
 include_once '../../config/database.php';
 
 // instantiate product object
 include_once '../../models/product.php';
 
+// get database connection
 $database = new Database();
 $db = $database->getConnection();
 
+// prepare product object
 $product = new Product($db);
 
 // get posted data
 $data = json_decode(file_get_contents("php://input"));
 
 // make sure data is not empty
-if (!empty($data->name)
-    && !empty($data->price)
-    && !empty($data->description)
-    && !empty($data->category_id)) {
+if (
+    !empty($data->name) &&
+    !empty($data->price) &&
+    !empty($data->description) &&
+    !empty($data->category_id)
+) {
 
     // set product property values
     $product->name = $data->name;
@@ -41,7 +45,9 @@ if (!empty($data->name)
 
         // tell the user
         echo json_encode(array("message" => "Product was created."));
-    } // if unable to create the product, tell the user
+    }
+
+    // if unable to create the product, tell the user
     else {
 
         // set response code - 503 service unavailable
@@ -50,7 +56,9 @@ if (!empty($data->name)
         // tell the user
         echo json_encode(array("message" => "Unable to create product."));
     }
-} // tell the user data is incomplete
+}
+
+// tell the user data is incomplete
 else {
 
     // set response code - 400 bad request
